@@ -12,11 +12,17 @@ git clone https://github.com/langchain-ai/langchain-academy.git
 $ cd langchain-academy
 ```
 
-### Create an environment and install dependencies  
+### Create an environment and install dependencies in zsh  
 ```
 $ python3 -m venv lc-academy-env
 $ source lc-academy-env/bin/activate
 $ pip install -r requirements.txt
+```
+### OR Create an environment and install dependencies in Powershell  
+```
+python -m venv lc-academy-env
+.\lc-academy-env\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
 ### Running notebooks
@@ -29,6 +35,11 @@ $ jupyter notebook
 * If you don't have an OpenAI API key, you can sign up [here](https://openai.com/index/openai-api/).
 *  Set `OPENAI_API_KEY` in your environment 
 
+```
+$env:LANGCHAIN_TRACING_V2 = "true"
+$env:LANGCHAIN_API_KEY = "<your-api-key>"
+```
+
 ### Sign up for LangSmith
 
 * Sign up [here](https://docs.smith.langchain.com/) 
@@ -40,7 +51,7 @@ Tavily Search API is a search engine optimized for LLMs and RAG, aimed at effici
 
 ### Set up LangGraph Studio
 
-* Currently Studio only has macOS support
+* ***Currently Studio only has macOS support
 * Download the latest `.dmg` file [here](https://github.com/langchain-ai/langgraph-studio?tab=readme-ov-file#download)
 * Install Docker desktop for Mac [here](https://docs.docker.com/engine/install/)
 
